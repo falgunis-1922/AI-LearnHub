@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Register - AI LearnHub</title>
+  <style>
+    * { margin:0; padding:0; box-sizing:border-box; }
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: #000;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      overflow: hidden;
+      color: #fff;
+    }
+
+    .video-bg {
+      position: fixed;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      z-index: -2;
+      background: #0f2027;
+    }
+    .overlay {
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,0.5);
+      z-index: -1;
+    }
+
+    .register-container {
+      background: rgba(0, 0, 0, 0.7);
+      padding: 40px;
+      border-radius: 16px;
+      box-shadow: 0 0 25px rgba(0,0,0,0.5);
+      width: 100%;
+      max-width: 400px;
+      text-align: center;
+      position: relative;
+      z-index: 1;
+    }
+
+    h2 {
+      margin-bottom: 25px;
+      color: #00bcd4;
+      font-size: 1.8rem;
+    }
+
+    .input-group {
+      margin-bottom: 20px;
+      text-align:left;
+      position: relative;
+    }
+
+    .input-group label {
+      display:block;
+      margin-bottom:5px;
+      font-size:0.9rem;
+    }
+
+    .input-group input {
+      width:100%;
+      padding:12px;
+      border:none;
+      border-radius:8px;
+      background: rgba(255,255,255,0.1);
+      color:#fff;
+      font-size:1rem;
+    }
+
+    .register-btn {
+      width:100%;
+      padding:14px;
+      background: linear-gradient(to right, #00c6ff, #0072ff);
+      border:none;
+      border-radius:30px;
+      font-size:1rem;
+      color:white;
+      font-weight:bold;
+      cursor:pointer;
+      transition:.3s ease;
+      box-shadow:0 8px 15px rgba(0,114,255,0.2);
+    }
+    .register-btn:hover {
+      background: linear-gradient(to right, #0072ff, #00c6ff);
+      transform: translateY(-2px);
+      box-shadow:0 10px 20px rgba(0,114,255,0.4);
+    }
+
+    .small {
+      font-size:0.85rem;
+      margin-top:10px;
+    }
+    .small a {
+      color:#00bcd4;
+      text-decoration:none;
+    }
+    .small a:hover { text-decoration:underline; }
+
+    .error {
+      background: rgba(255,80,80,0.1);
+      padding:10px;
+      border-radius:6px;
+      margin-bottom:15px;
+      color:#ffb3b3;
+      font-size:0.9rem;
+    }
+  </style>
+</head>
+<body>
+
+  <video class="video-bg" autoplay muted loop playsinline poster="images/fallback.jpg">
+    <source src="C:\Users\ansar\Downloads\InShot_20250802_123744579.mp4" type="video/mp4">
+  </video>
+  <div class="overlay"></div>
+
+  <div class="register-container">
+    <h2>Create Account</h2>
+    <div id="errorBox" class="error" style="display:none;"></div>
+    <form id="registerForm">
+      <div class="input-group">
+        <label for="name">Full Name</label>
+        <input type="text" id="name" placeholder="Your name" required>
+      </div>
+      <div class="input-group">
+        <label for="email">Email</label>
+        <input type="email" id="email" placeholder="email@example.com" required>
+      </div>
+      <div class="input-group">
+        <label for="pass">Password</label>
+        <input type="password" id="pass" placeholder="Enter password" required>
+      </div>
+      <div class="input-group">
+        <label for="confirm">Confirm Password</label>
+        <input type="password" id="confirm" placeholder="Re-enter password" required>
+      </div>
+      <button type="submit" class="register-btn">Sign Up</button>
+    </form>
+    <div class="small">
+      Already have an account? <a href="login1.html">Login</a>
+    </div>
+  </div>
+
+  <script>
+    document.getElementById('registerForm').addEventListener('submit', function(e){
+      e.preventDefault();
+      const name = document.getElementById('name').value.trim();
+      const email = document.getElementById('email').value.trim();
+      const pass = document.getElementById('pass').value;
+      const confirm = document.getElementById('confirm').value;
+      const errBox = document.getElementById('errorBox');
+      errBox.style.display='none';
+
+      if (!name || !email || !pass || !confirm) {
+        errBox.textContent = 'Please fill all fields.';
+        errBox.style.display='block';
+        return;
+      }
+      if (pass !== confirm) {
+        errBox.textContent = 'Passwords do not match.';
+        errBox.style.display='block';
+        return;
+      }
+      // simple email format check
+      const pattern = /^[^\\s@]+@[^\\s@]+\\.[^\\s@]+$/;
+      if (!pattern.test(email)) {
+        errBox.textContent = 'Invalid email address.';
+        errBox.style.display='block';
+        return;
+      }
+
+      // demo success -> redirect
+      window.location.href = 'index.html';
+    });
+  </script>
+
+</body>
+</html>

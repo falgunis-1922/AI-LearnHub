@@ -1,0 +1,31 @@
+<div class="logo-with-tag">
+  <img src="images/AI1.jpg" alt="AI Logo" class="main-logo" />
+  <div class="tagline">Solution</div>
+</div>
+
+<style>
+  .logo-with-tag {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+    font-family: "Segoe UI", sans-serif;
+  }
+
+  .main-logo {
+    display: block;
+    width: 180px; /* adjust as needed */
+    height: auto;
+  }
+
+  .tagline {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #00c6ff;
+    background: linear-gradient(90deg, #00c6ff, #0072ff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    letter-spacing: 1px;
+    margin-top: -6px; /* pull it a bit up if you want it closer */
+  }
+</style>

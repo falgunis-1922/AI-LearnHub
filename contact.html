@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact Us - AI Solutions</title>
+  <link href="https://fonts.googleapis.com/css2?family=Segoe+UI&display=swap" rel="stylesheet"/>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <style>
+    * { margin:0; padding:0; box-sizing:border-box; }
+    body {
+      background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+      color: #fff;
+      font-family: 'Segoe UI', sans-serif;
+      min-height: 100vh;
+    }
+    header {
+      background: rgba(0,0,0,0.85);
+      padding: 15px 30px;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    nav {
+      max-width: 1200px;
+      margin: auto;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      flex-wrap:wrap;
+    }
+    .logo {
+      font-size:1.6rem;
+      color:#00f7ff;
+      font-weight:bold;
+      text-decoration:none;
+    }
+    nav ul {
+      list-style:none;
+      display:flex;
+      gap:18px;
+      flex-wrap:wrap;
+    }
+    nav ul li a {
+      color:#ccc;
+      text-decoration:none;
+      padding:6px 10px;
+      border-radius:4px;
+      font-size:0.95rem;
+      transition: background .25s, color .25s;
+    }
+    nav ul li a:hover {
+      background: rgba(255,255,255,0.05);
+      color:#fff;
+    }
+
+    .contact-section {
+      backdrop-filter: blur(6px);
+      background-color: rgba(0, 0, 0, 0.7);
+      padding: 80px 20px;
+      max-width: 600px;
+      margin: 120px auto 60px;
+      border-radius: 12px;
+      box-shadow: 0 0 35px rgba(0, 0, 0, 0.7);
+      position: relative;
+    }
+
+    .contact-section h2 {
+      text-align: center;
+      margin-bottom: 20px;
+      color: #00bcd4;
+      font-size: 2.5rem;
+    }
+
+    .contact-form {
+      display: flex;
+      flex-direction: column;
+      gap: 25px;
+    }
+
+    .input-group {
+      position: relative;
+    }
+
+    .input-group i {
+      position: absolute;
+      left: 12px;
+      top: 16px;
+      color: #999;
+      font-size: 1rem;
+    }
+
+    .input-group input,
+    .input-group textarea {
+      width: 100%;
+      padding: 16px 16px 16px 38px;
+      background: transparent;
+      border: 1px solid #555;
+      border-radius: 8px;
+      color: white;
+      font-size: 1rem;
+      outline: none;
+      transition: border-color .3s;
+    }
+
+    .input-group input:focus,
+    .input-group textarea:focus {
+      border-color: #00bcd4;
+    }
+
+    .input-group label {
+      position: center-right;
+      top: 14px;
+      left: 38px;
+      font-size: 1rem;
+      color: #aaa;
+      background-color: transparent;
+      transition: 0.2s ease all;
+      pointer-events: none;
+    }
+
+    .input-group input:focus + label,
+    .input-group input:not(:placeholder-shown) + label,
+    .input-group textarea:focus + label,
+    .input-group textarea:not(:placeholder-shown) + label {
+      top: -10px;
+      left: 34px;
+      font-size: 0.75rem;
+      background-color: #0f2027;
+      padding: 0 5px;
+      color: #00bcd4;
+      border-radius: 3px;
+    }
+
+    textarea {
+      resize: vertical;
+      min-height: 80px;
+    }
+
+    .contact-form button {
+      padding: 14px;
+      font-size: 1rem;
+      background: linear-gradient(to right, #00c6ff, #0072ff);
+      color: white;
+      border: none;
+      border-radius: 30px;
+      cursor: pointer;
+      font-weight: bold;
+      transition: all .3s ease;
+    }
+
+    .contact-form button:hover {
+      background: linear-gradient(to right, #0072ff, #00c6ff);
+      transform: translateY(-2px);
+      box-shadow: 0 12px 25px rgba(0, 188, 212, 0.4);
+    }
+
+    #formMessage {
+      margin-top: 15px;
+      font-weight: bold;
+      text-align: center;
+    }
+    .success { color: #0f0; }
+    .error { color: #ff6b6b; }
+
+    /* Footer */
+    footer {
+      background-color: rgba(0,0,0,0.85);
+      color: #ccc;
+      padding:50px 20px 20px;
+      margin-top:40px;
+    }
+    .footer-content {
+      display:flex;
+      flex-wrap:wrap;
+      justify-content:space-between;
+      max-width:1100px;
+      margin:auto;
+      gap:30px;
+    }
+    .footer-section {
+      flex:1 1 220px;
+      min-width:180px;
+    }
+    .footer-section h3 {
+      color:#00bcd4;
+      margin-bottom:14px;
+      font-size:1.1rem;
+      letter-spacing:0.5px;
+    }
+    .footer-section p {
+      margin:6px 0;
+      font-size:0.9rem;
+    }
+    .footer-section a {
+      color:#ccc;
+      text-decoration:none;
+      transition: color .2s ease;
+    }
+    .footer-section a:hover {
+      color:#fff;
+    }
+    .footer-bottom {
+      text-align:center;
+      margin-top:30px;
+      font-size:0.85rem;
+      color:#999;
+      border-top:1px solid rgba(255,255,255,0.05);
+      padding-top:15px;
+    }
+
+    @media (max-width: 900px) {
+      .contact-section {
+        margin: 140px 15px 60px;
+        padding: 60px 15px;
+      }
+      nav ul {
+        gap:10px;
+        flex-wrap:wrap;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <nav>
+      <a href="index.html" class="logo">AI Solutions</a>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="feature.html">Feature</a></li>
+        <li><a href="courses.html">Courses</a></li>
+		<li><a href="history.html">AI History</a></li>
+        <li><a href="contact.html" class="active">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="contact-section">
+    <h2>Contact Us</h2>
+    <form class="contact-form" id="contactForm" novalidate>
+      <div class="input-group">
+        <i class="fas fa-user"></i>
+        <input type="text" name="name" id="name" required placeholder=" " /><br>
+        <label for="name">Your Name</label>
+      </div>
+
+      <div class="input-group">
+        <i class="fas fa-envelope"></i>
+        <input type="email" name="email" id="email" required placeholder=" " />
+        <label for="email">Your Email</label>
+      </div>
+
+      <div class="input-group">
+        <i class="fas fa-comment-dots"></i>
+        <textarea name="message" id="message" required placeholder=" "></textarea>
+        <label for="message">Your Message</label>
+      </div>
+
+      <button type="submit">Send Message</button>
+      <div id="formMessage"></div>
+    </form>
+  </section>
+
+  <footer>
+    <div class="footer-content">
+      <div class="footer-section">
+        <h3>Company</h3>
+        <p><a href="about.html">About Us</a></p>
+        <p><a href="#">Privacy Policy</a></p>
+        <p><a href="#">Affiliate Program</a></p>
+      </div>
+      <div class="footer-section">
+        <h3>Get Help</h3>
+        <p><a href="#">FAQ</a></p>
+        <p><a href="#">Shipping</a></p>
+        <p><a href="#">Returns</a></p>
+      </div>
+      <div class="footer-section">
+        <h3>Explore</h3>
+        <p><a href="feature.html">Features</a></p>
+        <p><a href="courses.html">Courses</a></p>
+        <p><a href="history.html">AI History</a></p>
+      </div>
+      <div class="footer-section">
+        <h3>Follow Us</h3>
+        <p><a href="#">Facebook</a></p>
+        <p><a href="#">Instagram</a></p>
+        <p><a href="#">LinkedIn</a></p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      &copy; 2025 AI Solutions. All rights reserved.
+    </div>
+  </footer>
+
+  <script>
+    const form = document.getElementById('contactForm');
+    const msgDiv = document.getElementById('formMessage');
+    form.addEventListener('submit', function(e) {
+      e.preventDefault();
+      // simple validation demonstration
+      const name = form.name.value.trim();
+      const email = form.email.value.trim();
+      const message = form.message.value.trim();
+      if (!name || !email || !message) {
+        msgDiv.textContent = 'Please fill all fields.'; 
+        msgDiv.className = 'error';
+        return;
+      }
+      msgDiv.textContent = '✅ Message sent successfully!';
+      msgDiv.className = 'success';
+      form.reset();
+    });
+  </script>
+</body>
+</html>

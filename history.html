@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>History of AI - AI Solutions</title>
+  <link href="https://fonts.googleapis.com/css2?family=Segoe+UI&display=swap" rel="stylesheet"/>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <style>
+    * { margin:0; padding:0; box-sizing:border-box; }
+    body {
+      background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+      color: #fff;
+      font-family: 'Segoe UI', sans-serif;
+      min-height: 100vh;
+      line-height: 1.6;
+    }
+    header {
+      background: rgba(0,0,0,0.85);
+      padding: 15px 30px;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    nav {
+      max-width: 1200px;
+      margin: auto;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      flex-wrap:wrap;
+    }
+    .logo {
+      font-size: 1.6rem;
+      color: #00f7ff;
+      font-weight: bold;
+      text-decoration: none;
+    }
+    nav ul {
+      list-style: none;
+      display:flex;
+      gap:16px;
+      flex-wrap: wrap;
+    }
+    nav ul li a {
+      color: #ccc;
+      text-decoration: none;
+      padding: 6px 10px;
+      border-radius: 4px;
+      font-size: 0.95rem;
+      transition: background .25s, color .25s;
+    }
+    nav ul li a:hover,
+    nav ul li a.active {
+      background: rgba(255,255,255,0.05);
+      color: #fff;
+    }
+
+    .history-section {
+      max-width: 1000px;
+      margin: 100px auto 60px;
+      padding: 60px 20px;
+      background: rgba(0,0,0,0.6);
+      border-radius: 12px;
+      backdrop-filter: blur(6px);
+      box-shadow: 0 20px 50px rgba(0,0,0,0.5);
+    }
+
+    .history-section h1 {
+      text-align: center;
+      font-size: 2.8rem;
+      margin-bottom: 40px;
+      color: #00bcd4;
+    }
+
+    .timeline {
+      position: relative;
+      padding-left: 30px;
+      border-left: 3px solid #00bcd4;
+    }
+
+    .event {
+      position: relative;
+      margin-bottom: 40px;
+    }
+
+    .event::before {
+      content: "";
+      position: absolute;
+      left: -40px;
+      top: 6px;
+      width: 16px;
+      height: 16px;
+      background-color: #00bcd4;
+      border-radius: 50%;
+      border: 3px solid #fff;
+    }
+
+    .event h3 {
+      margin: 0 0 10px;
+      font-size: 1.4rem;
+      color: #00f7ff;
+    }
+
+    .event p {
+      margin: 8px 0;
+      font-size: 0.95rem;
+      color: #ddd;
+    }
+
+    footer {
+      background-color: rgba(0,0,0,0.85);
+      color: #ccc;
+      padding:50px 20px 20px;
+      margin-top:40px;
+    }
+    .footer-content {
+      display:flex;
+      flex-wrap:wrap;
+      justify-content:space-between;
+      max-width:1100px;
+      margin:auto;
+      gap:30px;
+    }
+    .footer-section {
+      flex:1 1 220px;
+      min-width:180px;
+    }
+    .footer-section h3 {
+      color:#00bcd4;
+      margin-bottom:14px;
+      font-size:1.1rem;
+      letter-spacing:0.5px;
+    }
+    .footer-section p {
+      margin:6px 0;
+      font-size:0.9rem;
+    }
+    .footer-section a {
+      color:#ccc;
+      text-decoration:none;
+      transition: color .2s ease;
+    }
+    .footer-section a:hover {
+      color:#fff;
+    }
+    .footer-bottom {
+      text-align:center;
+      margin-top:30px;
+      font-size:0.85rem;
+      color:#999;
+      border-top:1px solid rgba(255,255,255,0.05);
+      padding-top:15px;
+    }
+
+    @media (max-width: 900px) {
+      .history-section {
+        margin: 120px 15px 60px;
+        padding: 50px 15px;
+      }
+      nav ul {
+        gap:10px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <nav>
+      <a href="index.html" class="logo">AI Solutions</a>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="feature.html">Feature</a></li>
+        <li><a href="courses.html">Courses</a></li>
+		<li><a href="history.html" class="active">AI History</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="history-section">
+    <h1>History of Artificial Intelligence</h1>
+    <div class="timeline">
+      <div class="event">
+        <h3>1943 – First Neural Network Model</h3>
+        <p>Warren McCulloch and Walter Pitts published a seminal paper introducing a mathematical model of artificial neurons. Their work laid the groundwork for later neural network research by demonstrating how networks of simple units could perform logical operations.</p>
+      </div>
+      <div class="event">
+        <h3>1950 – Turing Test</h3>
+        <p>Alan Turing proposed the question “Can machines think?” and introduced the Turing Test as a behavioral benchmark for machine intelligence. It evaluated whether a machine could imitate human responses indistinguishably in a conversational setting.</p>
+      </div>
+      <div class="event">
+        <h3>1956 – Dartmouth Conference (Birth of AI)</h3>
+        <p>John McCarthy, Marvin Minsky, Nathaniel Rochester, and Claude Shannon convened at Dartmouth, coining the term “Artificial Intelligence.” This event is considered the official birth of AI as a field, launching research programs and optimism about machine cognition.</p>
+      </div>
+      <div class="event">
+        <h3>1966 – ELIZA: Early Natural Language</h3>
+        <p>Joseph Weizenbaum developed ELIZA, a program that mimicked conversation using pattern matching and substitution. Though simple, ELIZA revealed how people could attribute understanding to machines even without true comprehension.</p>
+      </div>
+      <div class="event">
+        <h3>1980s – Expert Systems and Knowledge Engineering</h3>
+        <p>AI saw practical deployment through expert systems like MYCIN and XCON, which encoded specialist knowledge to make decisions in medicine and configuration. These systems demonstrated value in narrow domains but highlighted challenges of knowledge acquisition.</p>
+      </div>
+      <div class="event">
+        <h3>1997 – IBM’s Deep Blue Beats Kasparov</h3>
+        <p>IBM's Deep Blue defeated reigning world chess champion Garry Kasparov, marking the first time a reigning champion lost to a computer under standard chess tournament conditions. This achievement showcased brute-force search combined with domain-specific heuristics.</p>
+      </div>
+      <div class="event">
+        <h3>2011 – IBM Watson on Jeopardy!</h3>
+        <p>Watson used natural language processing, massive data analysis, and probability scoring to defeat human champions on the quiz show Jeopardy!. It illustrated how AI could interpret nuanced language and retrieve contextually relevant information rapidly.</p>
+      </div>
+      <div class="event">
+        <h3>2016 – AlphaGo’s Historic Victory</h3>
+        <p>Google DeepMind’s AlphaGo defeated Lee Sedol, one of the world's top Go players, using deep neural networks and reinforcement learning. Go, with its vast number of possible moves, was long considered a barrier for AI; AlphaGo’s win signaled a leap in learning and strategy.</p>
+      </div>
+      <div class="event">
+        <h3>2020s – Generative AI Revolution</h3>
+        <p>Large-scale models like GPT-3, DALL·E, and subsequent iterations brought generative capabilities to language, images, and more. These foundation models can draft text, create realistic images, and assist in creative tasks, reshaping interactions with AI.</p>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-content">
+      <div class="footer-section">
+        <h3>Company</h3>
+        <p><a href="about.html">About Us</a></p>
+        <p><a href="#">Privacy Policy</a></p>
+        <p><a href="#">Affiliate Program</a></p>
+      </div>
+      <div class="footer-section">
+        <h3>Get Help</h3>
+        <p><a href="contact.html">Contact</a></p>
+        <p><a href="#">FAQ</a></p>
+        <p><a href="#">Returns</a></p>
+      </div>
+      <div class="footer-section">
+        <h3>Explore</h3>
+        <p><a href="feature.html">Features</a></p>
+        <p><a href="courses.html">Courses</a></p>
+        <p><a href="index.html">Home</a></p>
+      </div>
+      <div class="footer-section">
+        <h3>Follow Us</h3>
+        <p><a href="#">Facebook</a></p>
+        <p><a href="#">Instagram</a></p>
+        <p><a href="#">LinkedIn</a></p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      &copy; 2025 AI Solutions. All rights reserved.
+    </div>
+  </footer>
+
+</body>
+</html>

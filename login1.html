@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Login to AI Solutions</title>
+  <style>
+    * { margin:0; padding:0; box-sizing:border-box; }
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: #000; /* fallback if video fails */
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      overflow: hidden;
+      color: #fff;
+    }
+
+    /* video background */
+    .video-bg {
+      position: fixed;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      z-index: -2;
+    }
+
+    .overlay {
+      position: fixed;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.5);
+      z-index: -1;
+    }
+
+    .login-container {
+      background: rgba(0, 0, 0, 0.7);
+      padding: 40px;
+      border-radius: 16px;
+      box-shadow: 0 0 25px rgba(0, 0, 0, 0.5);
+      color: #fff;
+      width: 100%;
+      max-width: 400px;
+      text-align: center;
+      position: relative;
+      z-index: 1;
+    }
+
+    .login-container h2 {
+      margin-bottom: 25px;
+      color: #00bcd4;
+    }
+
+    .input-group {
+      margin-bottom: 20px;
+      text-align: left;
+      position: relative;
+    }
+
+    .input-group label {
+      display: block;
+      margin-bottom: 5px;
+      font-size: 0.9rem;
+    }
+
+    .input-group input {
+      width: 100%;
+      padding: 12px;
+      border: none;
+      border-radius: 8px;
+      font-size: 1rem;
+      background: rgba(255,255,255,0.1);
+      color: #fff;
+    }
+
+    .toggle-password {
+      position: absolute;
+      right: 12px;
+      top: 36px;
+      cursor: pointer;
+      font-size: 1rem;
+      color: #ccc;
+      user-select: none;
+    }
+
+    .login-btn {
+      width: 100%;
+      padding: 14px;
+      background: linear-gradient(to right, #00c6ff, #0072ff);
+      border: none;
+      border-radius: 30px;
+      font-size: 1rem;
+      color: white;
+      font-weight: bold;
+      cursor: pointer;
+      transition: 0.3s ease;
+      box-shadow: 0 8px 15px rgba(0, 114, 255, 0.2);
+    }
+
+    .login-btn:hover {
+      background: linear-gradient(to right, #0072ff, #00c6ff);
+      box-shadow: 0 10px 20px rgba(0, 114, 255, 0.4);
+      transform: translateY(-2px);
+    }
+
+    .options {
+      margin-top: 20px;
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 5px;
+      font-size: 0.9rem;
+    }
+
+    .options a {
+      color: #00bcd4;
+      text-decoration: none;
+    }
+
+    .options a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Video background (put your video at videos/background.mp4) -->
+  <video class="video-bg" autoplay muted loop playsinline poster="images/fallback.jpg">
+    <source src="C:\Users\ansar\Downloads\InShot_20250802_123744579.mp4" type="video/mp4">
+    <!-- fallback: nothing, overlay/gradient stays -->
+  </video>
+  <div class="overlay"></div>
+
+  <div class="login-container">
+    <h2>Login to AI Solutions</h2>
+    <form onsubmit="event.preventDefault(); window.location.href='index.html';">
+      <div class="input-group">
+        <label for="username">Username or Email</label>
+        <input type="email" id="email" placeholder="email" required>
+      </div>
+
+      <div class="input-group">
+        <label for="password">Password</label>
+        <input type="password" id="password" placeholder="Enter your password" required>
+        <span class="toggle-password" onclick="togglePassword()">👁</span>
+      </div>
+
+      <button type="submit" class="login-btn"><a href="index.html">🔐 Login</a></button>
+
+      <div class="options">
+        <p><a href="#">Forgot Password?</a></p>
+        <p>Don't have an account? <a href="register.html">Register</a></p>
+      </div>
+    </form>
+  </div>
+
+  <script>
+  function valid(email) {
+    const pattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return pattern.test(email);
+}
+const email = "example@domain.com";
+console.log(valid(email) ? "Valid email address" : "Invalid email address");
+	
+    function togglePassword() {
+      const pass = document.getElementById("password");
+      pass.type = pass.type === "password" ? "text" : "password";
+    }
+	
+  </script>
+
+</body>
+</html>

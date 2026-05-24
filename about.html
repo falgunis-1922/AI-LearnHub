@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>About Us - AI Solutions</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    body {
+      background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+      color: #fff;
+      min-height: 100vh;
+      line-height: 1.5;
+    }
+
+    header {
+      background: rgba(0, 0, 0, 0.85);
+      padding: 15px 30px;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    nav {
+      max-width: 1200px;
+      margin: auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+    }
+
+    .logo {
+      font-size: 1.6rem;
+      color: #00f7ff;
+      font-weight: bold;
+      text-decoration: none;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    nav ul li a {
+      color: #ccc;
+      text-decoration: none;
+      font-size: 0.95rem;
+      padding: 6px 8px;
+      transition: color 0.25s ease, background 0.25s ease;
+      border-radius: 4px;
+    }
+
+    nav ul li a:hover {
+      color: #fff;
+      background: rgba(255,255,255,0.05);
+    }
+
+    .about-section {
+      background-color: rgba(0, 0, 0, 0.6);
+      backdrop-filter: blur(6px);
+      padding: 80px 20px;
+      max-width: 1100px;
+      margin: 80px auto 40px;
+      border-radius: 12px;
+      box-shadow: 0 20px 50px rgba(0,0,0,0.5);
+      text-align: center;
+    }
+
+    .about-section h1 {
+      font-size: 2.8rem;
+      color: #00bcd4;
+      margin-bottom: 20px;
+      position: relative;
+    }
+
+    .about-section p {
+      font-size: 1.1rem;
+      color: #ddd;
+      max-width: 900px;
+      margin: 0 auto 40px;
+    }
+
+    .team-section {
+      margin-top: 40px;
+    }
+
+    .team-section h2 {
+      color: #00bcd4;
+      font-size: 2rem;
+      margin-bottom: 30px;
+    }
+
+    .team-cards {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 30px;
+    }
+
+    .team-card {
+      background-color: rgba(255, 255, 255, 0.05);
+      border: 1px solid #444;
+      border-radius: 10px;
+      padding: 20px;
+      width: 220px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      text-align: center;
+    }
+
+    .team-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 10px 25px rgba(0, 188, 212, 0.35);
+    }
+
+    .team-card img {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-bottom: 12px;
+      border: 2px solid #00bcd4;
+    }
+
+    .team-card h3 {
+      margin: 10px 0 5px;
+      font-size: 1.1rem;
+      color: #fff;
+    }
+
+    .team-card p {
+      font-size: 0.85rem;
+      color: #ccc;
+    }
+
+    /* Footer */
+    footer {
+      background-color: rgba(0, 0, 0, 0.85);
+      color: #ccc;
+      padding: 50px 20px 20px;
+    }
+
+    .footer-content {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      max-width: 1100px;
+      margin: auto;
+      gap: 30px;
+    }
+
+    .footer-section {
+      flex: 1 1 220px;
+      min-width: 180px;
+    }
+
+    .footer-section h3 {
+      color: #00bcd4;
+      margin-bottom: 14px;
+      font-size: 1.1rem;
+      letter-spacing: 0.5px;
+    }
+
+    .footer-section p {
+      margin: 6px 0;
+      font-size: 0.9rem;
+    }
+
+    .footer-section a {
+      color: #ccc;
+      text-decoration: none;
+      transition: color 0.2s ease;
+    }
+
+    .footer-section a:hover {
+      color: #fff;
+    }
+
+    .footer-bottom {
+      text-align: center;
+      margin-top: 30px;
+      font-size: 0.85rem;
+      color: #999;
+      border-top: 1px solid rgba(255,255,255,0.05);
+      padding-top: 15px;
+    }
+
+    @media (max-width: 900px) {
+      .about-section {
+        margin: 100px 15px 40px;
+        padding: 60px 15px;
+      }
+      .team-cards {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <nav>
+      <a href="index.html" class="logo">AI Solutions</a>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html" class="active">About</a></li>
+        <li><a href="feature.html">Feature</a></li>
+        <li><a href="courses.html">Courses</a></li>
+		<li><a href="history.html">AI History</a></li>
+        <li><a href="contact.html">Contact</a></li>
+       
+		
+      </ul>
+    </nav>
+  </header>
+
+  <section class="about-section">
+    <h1>About Us</h1>
+    <p>
+      Welcome to our company! We are a passionate team of developers, designers, and creators who aim to deliver powerful and creative solutions for businesses and individuals. Our mission is to blend technology with simplicity and build products that make a difference.
+    </p>
+
+    <div class="team-section">
+      <h2>Meet the Team</h2>
+      <div class="team-cards">
+        <div class="team-card">
+          <img src="images/member1.jpg" alt="Team Member 1">
+          <h3>Riya Vadher</h3>
+          <p>Founder & CEO</p>
+        </div>
+        <div class="team-card">
+          <img src="images/member2.jpg" alt="Team Member 2">
+          <h3>Falguni Patani</h3>
+          <p>Lead Designer</p>
+        </div>
+        <div class="team-card">
+          <img src="images/member3.jpg" alt="Team Member 3">
+          <h3>Asra Ansari</h3>
+          <p>Backend Developer</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-content">
+      <div class="footer-section">
+        <h3>Company</h3>
+        <p><a href="#">About Us</a></p>
+        <p><a href="#">Privacy Policy</a></p>
+        <p><a href="#">Affiliate Program</a></p>
+      </div>
+      <div class="footer-section">
+        <h3>Get Help</h3>
+        <p><a href="#">FAQ</a></p>
+        <p><a href="#">Shipping</a></p>
+        <p><a href="#">Returns</a></p>
+      </div>
+      <div class="footer-section">
+        <h3>Explore</h3>
+        <p><a href="feature.html">Features</a></p>
+        <p><a href="courses.html">Courses</a></p>
+        <p><a href="history.html">AI History</a></p>
+      </div>
+      <div class="footer-section">
+        <h3>Follow Us</h3>
+        <p><a href="#">Facebook</a></p>
+        <p><a href="#">Instagram</a></p>
+        <p><a href="#">LinkedIn</a></p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      &copy; 2025 AI Solutions. All rights reserved.
+    </div>
+  </footer>
+</body>
+</html>
